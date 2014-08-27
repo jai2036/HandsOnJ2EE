@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ajax Sample Database Activity</title>
+<script type="text/javascript">
+function aja()
+{
+	var xmlhttp;
+	var key=document.form_1.select_1.value;
+	var url="http://localhost:4545/AjaxDatabaseCon/db_fetch.jsp?param="+key; //or////---> http://localhost:4545/AjaxDatabaseCon/db_fetch.jsp  .....plz do not pass URI i.e /db_fetch.jsp
+   /*  alert(url); */
+	if(window.XMLHttpRequest){
+	xmlhttp=new XMLHttpRequest();
+	}
+	else{
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	{
+		
+			var some=xmlhttp.responseXML.documentElement;
+		    document.getElementById("a").innerHTML=some.getElementsByTagName("empno")[0].childNodes[0].nodeValue;
+			document.getElementById("b").innerHTML=some.getElementsByTagName("empfname")[0].childNodes[0].nodeValue;
+			document.getElementById("c").innerHTML=some.getElementsByTagName("emplname")[0].childNodes[0].nodeValue;
+			document.getElementById("d").innerHTML=some.getElementsByTagName("empaddr")[0].childNodes[0].nodeValue;
+			document.getElementById("e").innerHTML=some.getElementsByTagName("empbranch")[0].childNodes[0].nodeValue;
+	
+	}
+	
+	xmlhttp.open("GET",url,true);
+	xmlhttp.send();
+}
+
+</script>
+</head>
+<body>
+ <!--  Form Starts  -->
+<form name="form_1">
+<select name="select_1" onchange="aja()">
+<option value="102">102</option>
+<option value="103">103</option>
+<option value="105">105</option>
+<option value="107">107</option>
+<option value="108">108</option>
+</select>
+</form>
+  <!--  Form Ends  -->
+
+id : <span id="a" style="color: blue"></span><br>
+fname:<span id="b" style="color: blue"></span><br>
+Lname:<span id="c" style="color: blue"></span><br>
+City:<span id="d" style="color: blue"></span><br>
+Branch:<span id="e" style="color: blue"></span>
+
+<div align="center">
+<b>This is the body of the page</b>
+</div>
+</body>
+</html>

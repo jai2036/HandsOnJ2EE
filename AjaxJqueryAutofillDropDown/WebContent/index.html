@@ -1,0 +1,77 @@
+<html>
+<head>
+<script src="jquery-1.11.1.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+    var xmlhttp;
+    var urls="http://localhost:4545/AjaxJqueryAutofillDropDown/db_fetch.jsp"
+
+    if (window.XMLHttpRequest)
+    {
+         xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xmlhttp.onreadystatechange=function()
+   {
+
+      z=0;
+      removeall();
+
+    if (xmlhttp.readyState==4)   /* request finished and response is ready */
+    {
+            var roott=xmlhttp.responseXML.documentElement;
+            var ress=roott.getElementsByTagName("empname")[z].childNodes[0].nodeValue;
+
+            while(ress!=null)
+            {
+                    addoptions(ress);
+                    z++;
+              var ress=roott.getElementsByTagName("empname")[z].childNodes[0].nodeValue;
+            }
+     }
+
+    function removeall()
+    {
+
+        var ct=document.dummy.sele2.length;
+        for(i=ct; i>=0; i--)    {    
+            document.dummy.sele2.options[i]=null;
+             }
+    }
+
+    function addoptions(reslt)
+    {
+
+        var ct1=document.createElement("OPTION");
+        ct1.text=reslt;
+        ct1.value=reslt;
+        document.dummy.sele2.options.add(ct1);
+
+    }
+ }    //onreadystatechnge function end
+
+xmlhttp.open("GET",urls,true);
+xmlhttp.send();
+
+});
+
+</script>
+</head>
+<body>
+
+<form name="dummy">
+EName:
+<select name="sele2">
+<option>--choose--</option>
+</select>
+
+</form>
+
+</body>
+</html>
