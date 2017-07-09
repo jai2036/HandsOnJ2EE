@@ -33,7 +33,7 @@ Details about various projects are -
  * Contains jars and dependecies required for above projects.
  
 ##Others
- * Java implementation of various programning problems. 
+ * Java implementation of various programming problems. 
  
 ## Author
 
