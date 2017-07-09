@@ -1,4 +1,4 @@
-# myrepothome
+# HandsOnJ2EE
 This covers basics use of J2EE stacks using jsp, Ajax, Jquery, servlet & jstl tags.
 
 Details about various projects are - 
