@@ -32,8 +32,6 @@ Details about various projects are -
 ## Resource
  * Contains jars and dependecies required for above projects.
  
-## Others
- * Java implementation of various programming problems. 
  
 ## Author
 
