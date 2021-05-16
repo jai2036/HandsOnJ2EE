@@ -1,7 +1,7 @@
 # HandsOnJ2EE
 This covers basics use of J2EE stacks using jsp, Ajax, Jquery, servlet & jstl tags.
 
-Details about various projects are - 
+Details about various projects under this project are - 
 
 ## AjaxDatabaseCon
  * Ajax Onchange Fetch The Data From The Database. 
@@ -17,16 +17,16 @@ Details about various projects are -
 ## AjaxJqueryAutofillDropDown
  * Autocomplete feature in JSP using Jquery API
 
-## AjaxTesing
+## Ajax Demo
  * Your first "Hello Ajax" program 
 
-## Jstl
+## Use of JSTL
  * This demo covers use of various JSTL tags within a JSP page by quering records from table.
 
-## Cebs
+## Login/Registration
  * This covers use of servlet by implementing a sample SignIn/SignUp system for a company.
 
-## Cebscart
+## Retail Cart system
  * This covers use of Filters, beans in servlet by adding and removing products to the cart.
  
 ## Resource
