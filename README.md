@@ -1,4 +1,4 @@
-# HandsOnJ2EE
+# J2EE Beginners 
 This covers basics use of J2EE stacks using jsp, Ajax, Jquery, servlet & jstl tags.
 
 Details about various projects under this project are - 
